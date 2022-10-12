@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,11 +13,12 @@ public class MeatSpawner : MonoBehaviour
     [SerializeField] private float maxYPos;
     [SerializeField] private float maxXPos;
     [SerializeField] private GameObject meatObject;
-    [SerializeField] private Text meatCountText;
+    [SerializeField] private TextMeshProUGUI meatCountText;
 
     public void MeatSpawn()
     {
         if (meatCount > 9) return;
+        meatCount++;
         RefreshCountText();
         Debug.Log(-maxXPos + "//" + -1 * maxXPos);
         Instantiate(meatObject, 
