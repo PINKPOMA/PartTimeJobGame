@@ -12,7 +12,7 @@ public class Meat : MonoBehaviour
   private void Start()
   {
     StartCoroutine(Roast(Random.Range(0.5f, 1f))); //고기의 익는 시간을 랜덤하게 반환합니다.
-    _meatSprite = GetComponent<SpriteRenderer>();
+    _meatSprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
   }
 
 
