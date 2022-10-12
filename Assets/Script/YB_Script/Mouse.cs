@@ -17,20 +17,30 @@ public class Mouse : MonoBehaviour
         {
             Vector2 mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, 0f);
-            if (hit.collider.CompareTag("Meat"))
+            if (hit)
             {
-                var meatLevel = hit.transform.gameObject.GetComponent<Meat>().meatLevel;
-                switch (meatLevel)
+                if (hit.collider.CompareTag("Meat"))
                 {
-                    case 0:
-                        Debug.Log("raw meat");
-                        break;
-                    case 1:
-                        Debug.Log("cooked meat");
-                        break;
-                    case 2:
-                        Debug.Log("burnt meat");
-                        break;
+                    var meat = hit.transform.gameObject.GetComponent<Meat>().meatLevel;
+                    
+                    switch (meat)
+                    {
+                        case 0:
+                            Debug.Log("raw meat");
+                            Destroy(hit.collider.gameObject);
+                            break;
+                        case 1:
+                            Debug.Log("cooked meat");
+                            Destroy(hit.collider.gameObject);
+                            break;
+                        case 2:
+                            Debug.Log("burnt meat");
+                            Destroy(hit.collider.gameObject);
+                            break;
+                    }
+                    var meatManager = GameObject.FindWithTag("Spawner").GetComponent<MeatSpawner>();
+                    meatManager.meatCount--;
+                    meatManager.RefreshCountText();
                 }
             }
         }
