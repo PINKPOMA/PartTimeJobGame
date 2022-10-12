@@ -41,7 +41,7 @@ public class Mouse : MonoBehaviour
                     // 위에서 고기를 삭제했으니 여기서 고기 카운트를 줄여줄겁니다.
                     var meatManager = GameObject.FindWithTag("Spawner").GetComponent<MeatSpawner>(); // FindWithTag를 사용하면 해당 Tag가 달려있는 오브젝트만 확인하기에 기본 Find 보다 효율적입니다. 위에서 했던 방법과 똑같이 아래에서 MeatSpawner를 가져왔습니다.
                     meatManager.meatCount--; // meatCount를 하나 줄여줍니다.
-                    meatManager.RefreshCountText(); // 해당 함수는 고기 개수를 보여주는 Text를 새로고침 하는 용도로 만들었습니다. 방금 개수를 하나 내렸으니 호출하여 반영시켜줍니다.
+                    meatManager.RefreshCountText(); // 해당 함수는 고기의 개수를 보여주는 Text를 새로고침 하는 용도로 만들었습니다. 방금 개수를 하나 내렸으니 호출하여 반영시켜줍니다.
                 }
             }
         }
