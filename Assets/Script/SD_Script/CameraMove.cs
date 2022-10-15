@@ -3,29 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMove : MonoBehaviour
-{
-
-    public Vector3 cameraPosition;
-    public GameObject target;
-    public GameObject camera;
-    private Vector3 velocity = Vector3.zero;
-
-    
+{   
     //부드럽게 이동될 감도
-    public float smoothTime = 0.3f;
+    public float smoothTime = 10f;
+    
+    //이동할 타겟
+    public Vector3 target;
 
+    //속도
+    private float xVelocity = 30f;
+    private float yVelocity = 0;
 
-   void Update()
-   {
-        if(tag == "right")
+    void Update() 
+    {   
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(ray,out hit))
         {
-            //X좌표 27.22로 이동해야함.
-            if(Input.GetMouseButtonDown(0))
+            if(hit.transform.gameObject.tag == "Right")
             {
-                Vector3 rightPosition;
-                rightPosition = new Vector3(27.22f,0,0);
-                camera.transform.position = Vector3.SmoothDamp(camera.transform.position,rightPosition,ref velocity,smoothTime);
+            Debug.Log("오른쪽 화면 클릭");
+            float newPositioX = Mathf.SmoothDamp(transform.position.x,target.x,ref xVelocity,smoothTime);        
+            float newPositioY = Mathf.SmoothDamp(transform.position.y,target.y,ref yVelocity,smoothTime);
+            transform.position = new Vector3(newPositioX,newPositioY,transform.position.z);
             }
         }
-   }
+    }
 }
+
+
