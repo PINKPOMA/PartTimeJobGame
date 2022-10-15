@@ -6,11 +6,11 @@ public class orderScreenActive : MonoBehaviour
 {   
     //오더 스크린
     public GameObject orderScreen; 
-    public BoxCollider boxcollider;
+    public BoxCollider2D boxcollider;
 
     void Awake()
     {
-        boxcollider = GetComponent<BoxCollider>();
+        boxcollider = GetComponent<BoxCollider2D>();
     }
 
     //마우스 클릭하면 오더스크린 Active가 활성화됩니다.
