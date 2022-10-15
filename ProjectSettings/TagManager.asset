@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Meat
   - Spawner
+  - Right
+  - PosScreen
   layers:
   - Default
   - TransparentFX
