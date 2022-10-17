@@ -217,8 +217,8 @@ GameObject:
   m_Component:
   - component: {fileID: 105999067}
   - component: {fileID: 105999070}
-  - component: {fileID: 105999069}
   - component: {fileID: 105999068}
+  - component: {fileID: 105999071}
   m_Layer: 0
   m_Name: BugerOven
   m_TagString: Untagged
@@ -267,20 +267,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &105999069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105999066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315b483b2a450d0408067f9f9e2980a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orderScreen: {fileID: 128039751}
-  boxcollider: {fileID: 105999068}
 --- !u!212 &105999070
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -301,7 +287,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: decae3566edad8b4bbffb9b721fe9922, type: 2}
+  - {fileID: 2100000, guid: 8646d2d3a7a6df447942f45d93dc0d96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -333,6 +319,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &105999071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105999066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1684c20ddb88ee04baa78272834c3289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderScreen: {fileID: 0}
+  boxcollider: {fileID: 0}
 --- !u!1 &128039751
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +672,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 99142cfb747a23f41ab2329a0913c797, type: 2}
+  - {fileID: 2100000, guid: 039e04394c8dffa4e83c9d6d76307cf4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1167,8 +1167,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1323667208}
   - component: {fileID: 1323667211}
-  - component: {fileID: 1323667210}
   - component: {fileID: 1323667209}
+  - component: {fileID: 1323667213}
   - component: {fileID: 1323667212}
   m_Layer: 0
   m_Name: BugerOven
@@ -1218,20 +1218,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1323667210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323667207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315b483b2a450d0408067f9f9e2980a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orderScreen: {fileID: 128039751}
-  boxcollider: {fileID: 1323667209}
 --- !u!212 &1323667211
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1252,7 +1238,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d40f357d78605c4418a3f66eb491ff9d, type: 2}
+  - {fileID: 2100000, guid: 039e04394c8dffa4e83c9d6d76307cf4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1285,6 +1271,20 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1323667212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323667207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1684c20ddb88ee04baa78272834c3289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderScreen: {fileID: 0}
+  boxcollider: {fileID: 0}
+--- !u!114 &1323667213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1624,8 +1624,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1650025351}
   - component: {fileID: 1650025354}
-  - component: {fileID: 1650025353}
   - component: {fileID: 1650025352}
+  - component: {fileID: 1650025355}
   m_Layer: 0
   m_Name: Dispenser
   m_TagString: Untagged
@@ -1674,20 +1674,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1650025353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650025350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315b483b2a450d0408067f9f9e2980a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orderScreen: {fileID: 128039751}
-  boxcollider: {fileID: 1650025352}
 --- !u!212 &1650025354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1708,7 +1694,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: decae3566edad8b4bbffb9b721fe9922, type: 2}
+  - {fileID: 2100000, guid: 8646d2d3a7a6df447942f45d93dc0d96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1740,6 +1726,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1650025355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650025350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1684c20ddb88ee04baa78272834c3289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderScreen: {fileID: 0}
+  boxcollider: {fileID: 0}
 --- !u!1 &1865742622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,8 +1750,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1865742623}
   - component: {fileID: 1865742626}
-  - component: {fileID: 1865742625}
   - component: {fileID: 1865742624}
+  - component: {fileID: 1865742627}
   m_Layer: 0
   m_Name: PotatoOven
   m_TagString: Untagged
@@ -1800,20 +1800,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1865742625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865742622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315b483b2a450d0408067f9f9e2980a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orderScreen: {fileID: 128039751}
-  boxcollider: {fileID: 1865742624}
 --- !u!212 &1865742626
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1834,7 +1820,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d40f357d78605c4418a3f66eb491ff9d, type: 2}
+  - {fileID: 2100000, guid: 039e04394c8dffa4e83c9d6d76307cf4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1866,6 +1852,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1865742627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865742622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1684c20ddb88ee04baa78272834c3289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderScreen: {fileID: 0}
+  boxcollider: {fileID: 0}
 --- !u!1 &1867760301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,8 +1876,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1867760302}
   - component: {fileID: 1867760305}
-  - component: {fileID: 1867760304}
   - component: {fileID: 1867760303}
+  - component: {fileID: 1867760307}
   - component: {fileID: 1867760306}
   m_Layer: 0
   m_Name: Dispenser
@@ -1927,20 +1927,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1867760304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867760301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315b483b2a450d0408067f9f9e2980a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orderScreen: {fileID: 128039751}
-  boxcollider: {fileID: 1867760303}
 --- !u!212 &1867760305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1961,7 +1947,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d40f357d78605c4418a3f66eb491ff9d, type: 2}
+  - {fileID: 2100000, guid: 039e04394c8dffa4e83c9d6d76307cf4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2007,6 +1993,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderScreen: {fileID: 0}
   boxcollider: {fileID: 0}
+--- !u!114 &1867760307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867760301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1684c20ddb88ee04baa78272834c3289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderScreen: {fileID: 0}
+  boxcollider: {fileID: 0}
 --- !u!1 &1994809021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,8 +2017,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1994809022}
   - component: {fileID: 1994809025}
-  - component: {fileID: 1994809024}
   - component: {fileID: 1994809023}
+  - component: {fileID: 1994809027}
   - component: {fileID: 1994809026}
   m_Layer: 0
   m_Name: PotatoOven
@@ -2068,20 +2068,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1994809024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994809021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315b483b2a450d0408067f9f9e2980a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orderScreen: {fileID: 128039751}
-  boxcollider: {fileID: 1994809023}
 --- !u!212 &1994809025
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2102,7 +2088,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: decae3566edad8b4bbffb9b721fe9922, type: 2}
+  - {fileID: 2100000, guid: 8646d2d3a7a6df447942f45d93dc0d96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2135,6 +2121,20 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1994809026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994809021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1684c20ddb88ee04baa78272834c3289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderScreen: {fileID: 0}
+  boxcollider: {fileID: 0}
+--- !u!114 &1994809027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
