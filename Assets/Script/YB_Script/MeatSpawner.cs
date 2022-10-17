@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -22,7 +21,7 @@ public class MeatSpawner : MonoBehaviour
         RefreshCountText(); // 위에서 고기의 개수를 하나 증가시켰으니 함수를 호출하여 Text를 새로고침 해줍니다.
         Instantiate(meatObject, 
             new Vector2(Random.Range(-maxXPos, maxXPos), Random.Range(-maxYPos, maxYPos)),
-            quaternion.identity); // 고기를 위에서 지정한 위치 안에서 랜덤한 부분에 생성합니다.
+            Quaternion.identity); // 고기를 위에서 지정한 위치 안에서 랜덤한 부분에 생성합니다.
     }
 
     public void RefreshCountText() // 고기의 개수를 보여주는 Text를 새로고침 하는 용도입니다.
