@@ -1,10 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlateSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Serializable]
+    public class PlateArray
+    {
+        [FormerlySerializedAs("_plate")] [SerializeField] private GameObject[] plate;
+    }
+
+    [FormerlySerializedAs("_plateArray")] [SerializeField]
+    private PlateArray[] plateArray; 
     void Start()
     {
         
