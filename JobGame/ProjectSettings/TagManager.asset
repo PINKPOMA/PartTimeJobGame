@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spawner
   - Meat
+  - PotatoOven
+  - Dispenser
+  - Potato
   layers:
   - Default
   - TransparentFX
