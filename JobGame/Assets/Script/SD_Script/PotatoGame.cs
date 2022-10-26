@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PotatoGame : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PotatoGame : MonoBehaviour
     public GameObject Potato3;
     public GameObject Potato4;
     public GameObject Potato5;
+
+    //PotatoGame창
+    public GameObject PotatoGameScreen;
+    //텍스트
+    public Text GoodText;
 
 
 
@@ -41,4 +47,24 @@ public class PotatoGame : MonoBehaviour
             Potato5.SetActive(true);
         }
     }
+
+    void Update()
+    {
+        if(Potato1.activeInHierarchy && Potato2.activeInHierarchy &&
+        Potato3.activeInHierarchy && Potato4.activeInHierarchy && Potato5.activeInHierarchy)
+        {
+            StartCoroutine("PotatoGameEnd");
+        }
+    }
+
+    IEnumerator PotatoGameEnd()
+    {
+        GoodText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        GoodText.gameObject.SetActive(false);
+        PotatoGameScreen.SetActive(false);
+        yield return null;
+    }
+
+
 }
