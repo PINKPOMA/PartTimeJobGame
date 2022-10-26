@@ -20,12 +20,11 @@ public class Potato : MonoBehaviour
         Vector3 PotatoPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = PotatoPosition;
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Potato")
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

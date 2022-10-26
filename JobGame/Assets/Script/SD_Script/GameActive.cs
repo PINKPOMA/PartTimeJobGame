@@ -6,15 +6,16 @@ public class GameActive : MonoBehaviour
 {
     public GameObject PotatoGame;
     public GameObject DisPenserGame;
+    
     void OnMouseDown()
     {
         if(tag == "PotatoOven")
         {
-            PotatoGame.SetActive(true);
+            Instantiate(PotatoGame);
         }
         else if(tag == "Dispenser")
         {
-            DisPenserGame.SetActive(true);
+            Instantiate(DisPenserGame);
         }
     }
 }
