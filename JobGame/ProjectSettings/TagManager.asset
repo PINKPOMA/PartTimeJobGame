@@ -9,6 +9,7 @@ TagManager:
   - PotatoOven
   - Dispenser
   - Potato
+  - Plate
   layers:
   - Default
   - TransparentFX
