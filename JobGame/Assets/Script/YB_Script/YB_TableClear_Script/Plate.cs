@@ -5,4 +5,9 @@ using UnityEngine;
 public class Plate : MonoBehaviour
 {
     [SerializeField]private int type;
+
+    public int GetPlateType()
+    {
+        return type;
+    }
 }
