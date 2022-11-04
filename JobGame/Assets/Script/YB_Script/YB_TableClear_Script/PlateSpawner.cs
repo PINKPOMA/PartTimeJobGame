@@ -17,17 +17,18 @@ public class PlateSpawner : MonoBehaviour
     [FormerlySerializedAs("_plateArray")] [SerializeField]
     private PlateArray[] plateArray;
     [SerializeField]private Transform[] platePos;
+    
     void Start()
     {
         CreatePlate();
     }
 
-    void CreatePlate()
+    public void CreatePlate()
     {
         Shuffle();
         for (int i = 0; i < 4; i++)
         {
-            Instantiate(plateArray[i].plate[Random.Range(0,4)], platePos[i].position,quaternion.identity);
+            Instantiate(plateArray[i].plate[Random.Range(0, 4)], platePos[i].position, quaternion.identity);
         }
     }
 
