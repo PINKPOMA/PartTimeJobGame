@@ -6,16 +6,27 @@ public class GameActive : MonoBehaviour
 {
     public GameObject PotatoGame;
     public GameObject DisPenserGame;
+    int Plimit = 1;
+    int Dlimit = 2;
+    int Gamenum = 0;
     
     void OnMouseDown()
     {
         if(tag == "PotatoOven")
         {
-            Instantiate(PotatoGame);
+            Gamenum ++;
+            if(Gamenum == Plimit )
+            {
+                Instantiate(PotatoGame);
+            }
         }
         else if(tag == "Dispenser")
         {
-            Instantiate(DisPenserGame);
+            Gamenum = +2;
+            if(Gamenum == Dlimit )
+            {
+                Instantiate(DisPenserGame);
+            }
         }
     }
 }
