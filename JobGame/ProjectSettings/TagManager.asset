@@ -10,6 +10,8 @@ TagManager:
   - Dispenser
   - Potato
   - Plate
+  - MeatCountText
+  - Trash
   layers:
   - Default
   - TransparentFX
