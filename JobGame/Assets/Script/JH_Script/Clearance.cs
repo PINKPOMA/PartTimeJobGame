@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrashActive : MonoBehaviour
+public class Clearance : MonoBehaviour
 {
-    public GameObject TrashGame;
+    public GameObject ClearanceGame;
     int count = 0;
      
     void OnMouseDown()
@@ -12,10 +12,10 @@ public class TrashActive : MonoBehaviour
         count = count % 2;
         count++;
         if (count == 1) {
-            Instantiate(TrashGame);
+            Instantiate(ClearanceGame);
         }
         else {
-            Destroy(TrashGame);
+            Destroy(ClearanceGame);
         }
     }
 }

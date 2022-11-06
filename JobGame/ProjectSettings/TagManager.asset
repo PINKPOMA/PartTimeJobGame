@@ -12,6 +12,7 @@ TagManager:
   - Plate
   - MeatCountText
   - Trash
+  - Storage
   layers:
   - Default
   - TransparentFX
