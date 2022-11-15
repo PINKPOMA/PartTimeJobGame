@@ -25,7 +25,7 @@ public class WashingGenerator : MonoBehaviour
         tPlate.gameObject.GetComponent<Rigidbody2D>().velocity = tPlate.transform.right * 10f;
         if(maxPlate > nowPlate)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(3f);
             StartCoroutine(ThrowPlate());
         }
     }
