@@ -19,27 +19,27 @@ public class GameActive : MonoBehaviour
     int Gamenum = 0;
     int DGamenum = 0;
 
-    //감자 갯수를 올려주는 버튼
-    public GameObject potatoUpB;
-    
+
     void OnMouseDown()
     {
         if(tag == "PotatoOven")
         {
             Gamenum ++;
-            if(Gamenum == Plimit )
+            if(Gamenum == Plimit && !Potatoup.activeInHierarchy )
             {
                 Instantiate(PotatoGame);
+                
                 StartCoroutine("PotatoG");
             }
         }
         else if(tag == "Dispenser")
         {
             DGamenum = +2;
-            if(DGamenum == Dlimit )
+            if(DGamenum == Dlimit && !Dispenserup.activeInHierarchy )
             {
                 Instantiate(DisPenserGame);
-                Dispenserup.SetActive(true);
+               
+                StartCoroutine("DispenserG");
             }
         
         }
@@ -61,13 +61,13 @@ public class GameActive : MonoBehaviour
     }
     IEnumerator PotatoG()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Potatoup.SetActive(true);
         yield return null;
     }
     IEnumerator DispenserG()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Dispenserup.SetActive(true);
         yield return null;
     }
