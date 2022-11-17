@@ -10,15 +10,22 @@ public class PotatoGameFlase : MonoBehaviour
     //감자의 갯수를 올려주는 버튼은 이 스크립트가 있는 오브젝트입니다.
     private GameObject potatoUpB;
 
+    //스크립트
+    PotatoGame potatogameCs;
+    player playerCs;
 
 
-    public GameObject potatoGame;
-    public int PotatoHave;
 
+    void Awake()
+    {
+        potatogameCs = GameObject.Find("potatoGame").GetComponent<PotatoGame>();
+        playerCs = GameObject.Find("Player").GetComponent<player>();
+    }
     public void FixedUpdate() 
     {
         {
-            
+            if(potatogameCs.PFlase == true)
+            {
                 //감자게임이 꺼져있을때 마우스 버튼으로 오브젝트를 클릭하면
                 //스케일이 작아지고, 감자의 갯수가 올라갑니다.
                 if(Input.GetMouseButtonDown(0))
@@ -26,7 +33,7 @@ public class PotatoGameFlase : MonoBehaviour
                     CastRay();
                     if(potatoUpB == this.gameObject)
                     {       
-                        PotatoHave++;
+                        playerCs.potatoHave++;
                         transform.localScale = new Vector3(0.3f,0.3f);
                     /*var potatoUp = GameObject.Find("Player").GetComponent("player");
                     potatoUp.P_Potato();
@@ -39,6 +46,11 @@ public class PotatoGameFlase : MonoBehaviour
                 {
                     StartCoroutine("Delay");
                 }
+            }
+            else if(potatogameCs.PFlase == false)
+            {
+                potatoUpB.SetActive(false);
+            }
             
         }
     }
@@ -47,7 +59,8 @@ public class PotatoGameFlase : MonoBehaviour
     {
         transform.localScale = new Vector3(0.5f,0.5f);
         yield return new WaitForSeconds(0.5f);
-        this.gameObject.SetActive(false);
+        potatoUpB.SetActive(false);
+        yield return null;
     }
     void CastRay()
     {
