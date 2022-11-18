@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PotatoGame : MonoBehaviour
 {
+
+    //시간
+    float time;
     //포테이토 오브젝트
     public GameObject Potato1;
     public GameObject Potato2;
@@ -16,6 +19,9 @@ public class PotatoGame : MonoBehaviour
     public GameObject PotatoGameScreen;
     //텍스트
     public Text GoodText;
+
+    //코루틴이 실행중인지 확인해주는 불값
+    public bool PFlase = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -44,23 +50,35 @@ public class PotatoGame : MonoBehaviour
         }
     }
 
+    //다 한것과 상관없이 5초가 지나면 무조건 창이 없어지도록.
     void Update()
     {
-        if(Potato1.activeInHierarchy && Potato2.activeInHierarchy &&
+        time = Time.deltaTime;
+        if(time < 5 && Potato1.activeInHierarchy && Potato2.activeInHierarchy &&
         Potato3.activeInHierarchy && Potato4.activeInHierarchy && Potato5.activeInHierarchy)
         {
             StartCoroutine("PotatoGameEnd");
+        }
+
+        else if(time > 5)
+        {
+            StartCoroutine("PotatoGameBed");
         }
     }
 
     IEnumerator PotatoGameEnd()
     {
+        PFlase = true;
         GoodText.gameObject.SetActive(true);
         yield return new WaitForSeconds(2.0f);
         GoodText.gameObject.SetActive(false);
-        Destroy(PotatoGameScreen);
+        PotatoGameScreen.SetActive(false);
+        yield return new WaitForSeconds(5.0f);
+        PFlase = false;
         yield return null;
     }
+
+
 
 
 }
