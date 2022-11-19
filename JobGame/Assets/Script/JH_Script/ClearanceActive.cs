@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Clearance : MonoBehaviour
+public class ClearanceActive : MonoBehaviour
 {
     public GameObject ClearanceGame;
     int count = 0;
