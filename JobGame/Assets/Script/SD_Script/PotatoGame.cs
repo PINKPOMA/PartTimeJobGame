@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class PotatoGame : MonoBehaviour
 {
 
-    //시간
-    float time;
     //포테이토 오브젝트
     public GameObject Potato1;
     public GameObject Potato2;
@@ -19,9 +17,13 @@ public class PotatoGame : MonoBehaviour
     public GameObject PotatoGameScreen;
     //텍스트
     public Text GoodText;
+    //game을 Active 시켜주는 스크립트
+    GameActive gameActiveCs;
 
-    //코루틴이 실행중인지 확인해주는 불값
-    public bool PFlase;
+    void Start()
+    {
+        gameActiveCs = GameObject.Find("PotatoOven").GetComponent<GameActive>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -50,7 +52,6 @@ public class PotatoGame : MonoBehaviour
         }
     }
 
-    //다 한것과 상관없이 5초가 지나면 무조건 창이 없어지도록.
     void Update()
     {
         if( Potato1.activeInHierarchy && Potato2.activeInHierarchy &&
@@ -59,21 +60,21 @@ public class PotatoGame : MonoBehaviour
             StartCoroutine("PotatoGameEnd");
         }
 
-        /*else if(time > 5)
-        {
-            StartCoroutine("PotatoGameBed");
-        }타임어택? */ 
     }
 
     IEnumerator PotatoGameEnd()
     {
-        PFlase = true;
+        gameActiveCs.Gamenum = 0;
+        GameObject.FindWithTag("PotatoOven").GetComponent<GameActive>().PotatoReady();
         GoodText.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.4f);
+
         GoodText.gameObject.SetActive(false);
         PotatoGameScreen.SetActive(false);
-        yield return new WaitForSeconds(5.0f);
-        PFlase = false;
+
+        //먼저 활성화를 해제 하고 2초 뒤에 Destroy.
+        yield return new WaitForSeconds(0.5f);
+        Destroy(PotatoGameScreen);
         yield return null;
     }
 
