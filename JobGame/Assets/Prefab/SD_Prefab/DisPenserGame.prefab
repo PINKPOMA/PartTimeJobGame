@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 4862904373480626446}
   - component: {fileID: 4862904373480626447}
   m_Layer: 0
-  m_Name: DisPenser
+  m_Name: dispenserobj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 7711387953180228852}
   - component: {fileID: 6442196446163719868}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: DispenserObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
   one: {fileID: 4492830270841315963}
   Too: {fileID: 2108281336958372176}
   End: {fileID: 9032776641903747941}
-  DispenserGameObj: {fileID: 4862904373454740634}
+  DispenserGameScreen: {fileID: 0}
   GoodText: {fileID: 470686276523757018}
 --- !u!1 &7852365306583594949
 GameObject:
