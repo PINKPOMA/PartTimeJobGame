@@ -16,6 +16,7 @@ public class TrashActive : MonoBehaviour
         }
         else {
             Destroy(TrashGame);
+
         }
     }
 }
