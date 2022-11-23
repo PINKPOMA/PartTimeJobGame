@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class main : MonoBehaviour
+using UnityEngine.EventSystems;
+public class main : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    public static Vector2 DefaultPos;
+    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
-        
+        DefaultPos = this.transform.position;
     }
-
-    // Update is called once per frame
-    void Update()
+    void IDragHandler.OnDrag(PointerEventData eventData)
     {
-        
+        Vector2 currentPos = eventData.position; 
+        this.transform.position = currentPos;
+    }
+    void IEndDragHandler.OnEndDrag(PointerEventData eventData)
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
+        this.transform.position = DefaultPos;
     }
 }
