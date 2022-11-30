@@ -8,11 +8,14 @@ public class PotatoGameFlase : MonoBehaviour
 
     float distance = 10f;
     player PlayerCs;
+    GameActive GameActiveCs;
+
 
     void Awake()
     {
         PlayerCs = GameObject.Find("Player").GetComponent<player>();
-        //플레이어 스크립트 불러오기.
+        GameActiveCs = GameObject.Find("PotatoOven").GetComponent<GameActive>();
+        //플레이어 스크립트,게임 엑티브 불러오기.
     }
 
     void OnMouseDrag()
@@ -26,9 +29,9 @@ public class PotatoGameFlase : MonoBehaviour
     {
         if(other.tag == "Tray")
         {
+            GameActiveCs.PGameFalse();
             PlayerCs.potatoHave++;
             gameObject.SetActive(false);
-            Vector2 thisPosition = new Vector2(5.44f,-2.32f);
         }
     }
 

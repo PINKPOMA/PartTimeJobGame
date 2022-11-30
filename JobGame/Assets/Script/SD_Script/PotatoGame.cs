@@ -15,16 +15,17 @@ public class PotatoGame : MonoBehaviour
 
     //PotatoGame창
     public GameObject PotatoGameScreen;
+
+    GameActive GameActiveCs;
+
     //텍스트
     public Text GoodText;
-    //game을 Active 시켜주는 스크립트
-    GameActive gameActiveCs;
 
     void Start()
     {
-        gameActiveCs = GameObject.Find("PotatoOven").GetComponent<GameActive>();
+        GameActiveCs = GameObject.Find("PotatoOven").GetComponent<GameActive>();
+        GameActiveCs = GameObject.Find("Dispenser").GetComponent<GameActive>();
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.name == "PotatoObj1")
@@ -54,6 +55,7 @@ public class PotatoGame : MonoBehaviour
 
     void Update()
     {
+        
         if( Potato1.activeInHierarchy && Potato2.activeInHierarchy &&
         Potato3.activeInHierarchy && Potato4.activeInHierarchy && Potato5.activeInHierarchy)
         {
@@ -64,18 +66,12 @@ public class PotatoGame : MonoBehaviour
 
     IEnumerator PotatoGameEnd()
     {
-        gameActiveCs.Gamenum = 0;
         GameObject.FindWithTag("PotatoOven").GetComponent<GameActive>().PotatoReady();
         GoodText.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.4f);
-
         GoodText.gameObject.SetActive(false);
-        PotatoGameScreen.SetActive(false);
-
-        //먼저 활성화를 해제 하고 2초 뒤에 Destroy.
-        yield return new WaitForSeconds(0.5f);
+        GameActiveCs.DGameFalse();
         Destroy(PotatoGameScreen);
-        yield return null;
     }
 
 

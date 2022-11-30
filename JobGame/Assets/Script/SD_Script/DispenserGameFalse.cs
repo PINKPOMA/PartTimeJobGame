@@ -7,9 +7,11 @@ public class DispenserGameFalse : MonoBehaviour
     //PotatoGameFalse와 거의 동일한 스크립트 입니다.
     float distance = 10f;
     player PlayerCs;
-
+    GameActive GameActiveCs;
+     
     void Awake()
     {
+        GameActiveCs = GameObject.Find("Dispenser").GetComponent<GameActive>();
         PlayerCs = GameObject.Find("Player").GetComponent<player>();
         //플레이어 스크립트 불러오기.
     }
@@ -26,7 +28,7 @@ public class DispenserGameFalse : MonoBehaviour
         if(other.tag == "Tray")
         {
             PlayerCs.PepsiHave ++;
-            gameObject.SetActive(false);
+            GameActiveCs.DGameFalse();
         }
     }
    

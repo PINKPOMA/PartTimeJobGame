@@ -16,26 +16,25 @@ public class DispenserGame : MonoBehaviour
 
     //텍스트
     public Text GoodText;
-
-    //Game을 Active 시켜주는 스크립트
-    GameActive gameActiveCs;
-
+    GameActive GameActiveCs;
+    
     void Start()
     {
-        gameActiveCs = GameObject.Find("Dispenser").GetComponent<GameActive>();
+        GameActiveCs = GameObject.Find("PotatoOven").GetComponent<GameActive>();
+        GameActiveCs = GameObject.Find("Dispenser").GetComponent<GameActive>();
+
     }
 
     public void Update()
     {
         //코루틴 실행
-            StartCoroutine("DispenserGameEnd");
+        StartCoroutine("DispenserGameEnd");
     }
 
     IEnumerator DispenserGameEnd()
         {
             //콜라의 갯수를 올려주는 오브젝트의 활성화 함수를 불러오기.
-            GameObject.FindWithTag("DispenserObj").GetComponent<GameActive>().DispenserReady();
-            gameActiveCs.DGamenum = 0;
+            GameObject.FindWithTag("PotatoOven").GetComponent<GameActive>().DispenserReady();
             yield return new WaitForSeconds(0.5f);
             one.SetActive(true);
             yield return new WaitForSeconds(0.5f);
@@ -43,13 +42,10 @@ public class DispenserGame : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             End.SetActive(true);
             GoodText.gameObject.SetActive(true);
-            yield return new WaitForSeconds(1.3f);
-
-            //먼저 활성화 해제 하고 2초뒤에 Destroy시켜준다.
+            yield return new WaitForSeconds(1f);
+            GameActiveCs.PGameFalse();
             GoodText.gameObject.SetActive(false);
-            DispenserGameScreen.SetActive(false);
-            yield return new WaitForSeconds(0.5f);
-            Destroy(this);
-            yield return null;
+            
+            Destroy(DispenserGameScreen);
         }
 }
