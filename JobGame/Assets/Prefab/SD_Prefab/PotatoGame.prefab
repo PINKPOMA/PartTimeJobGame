@@ -406,8 +406,8 @@ MonoBehaviour:
   Potato4: {fileID: 8243141336871892158}
   Potato5: {fileID: 8243141336632308210}
   PotatoGameScreen: {fileID: 8243141336086834537}
+  PotatoUp: {fileID: 3620910826396369739, guid: f5434ae76d2235d40ab5ff0151ac1386, type: 3}
   GoodText: {fileID: 3511561838129203321}
-  PFlase: 0
 --- !u!50 &8243141336583572040
 Rigidbody2D:
   serializedVersion: 4

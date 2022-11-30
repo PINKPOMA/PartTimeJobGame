@@ -702,7 +702,8 @@ MonoBehaviour:
   one: {fileID: 4492830270841315963}
   Too: {fileID: 2108281336958372176}
   End: {fileID: 9032776641903747941}
-  DispenserGameScreen: {fileID: 0}
+  DispenserGameScreen: {fileID: 4862904373454740634}
+  PepciUp: {fileID: 7706850679015483264, guid: 47cd5e49db7674b4bbfe07ec1751aaa9, type: 3}
   GoodText: {fileID: 470686276523757018}
 --- !u!1 &7852365306583594949
 GameObject:
