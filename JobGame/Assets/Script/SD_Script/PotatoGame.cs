@@ -13,19 +13,19 @@ public class PotatoGame : MonoBehaviour
     public GameObject Potato4;
     public GameObject Potato5;
 
-    //PotatoGame창
+    //스크립트
     public GameObject PotatoGameScreen;
-
-    GameActive GameActiveCs;
+    DispenserActive DispenserActiveCs;
 
     //텍스트
     public Text GoodText;
 
     void Start()
     {
-        GameActiveCs = GameObject.Find("PotatoOven").GetComponent<GameActive>();
-        GameActiveCs = GameObject.Find("Dispenser").GetComponent<GameActive>();
+        DispenserActiveCs = GameObject.FindWithTag("Dispenser").GetComponent<DispenserActive>();
+        DispenserActiveCs.DGameTrue();
     }
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.name == "PotatoObj1")
@@ -66,11 +66,11 @@ public class PotatoGame : MonoBehaviour
 
     IEnumerator PotatoGameEnd()
     {
-        GameObject.FindWithTag("PotatoOven").GetComponent<GameActive>().PotatoReady();
+        GameObject.FindWithTag("PotatoOven").GetComponent<PotatoGameActive>().PotatoReady();
+        GameObject.FindWithTag("Dispenser").GetComponent<DispenserActive>().DGameFalse();
         GoodText.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.4f);
         GoodText.gameObject.SetActive(false);
-        GameActiveCs.DGameFalse();
         Destroy(PotatoGameScreen);
     }
 

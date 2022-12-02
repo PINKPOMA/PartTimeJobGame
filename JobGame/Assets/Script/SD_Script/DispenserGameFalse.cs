@@ -29,6 +29,7 @@ public class DispenserGameFalse : MonoBehaviour
         {
             PlayerCs.PepsiHave ++;
             GameActiveCs.DGameFalse();
+            gameObject.SetActive(false);
         }
     }
    

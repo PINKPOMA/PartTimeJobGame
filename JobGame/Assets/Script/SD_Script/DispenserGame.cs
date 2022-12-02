@@ -16,14 +16,14 @@ public class DispenserGame : MonoBehaviour
 
     //텍스트
     public Text GoodText;
-    GameActive GameActiveCs;
-    
+    PotatoGameActive PotatoGameActiveCs;
+
     void Start()
     {
-        GameActiveCs = GameObject.Find("PotatoOven").GetComponent<GameActive>();
-        GameActiveCs = GameObject.Find("Dispenser").GetComponent<GameActive>();
-
+        PotatoGameActiveCs = GameObject.FindWithTag("PotatoOven").GetComponent<PotatoGameActive>();
+        PotatoGameActiveCs.PotatoTrue();
     }
+    
 
     public void Update()
     {
@@ -34,7 +34,7 @@ public class DispenserGame : MonoBehaviour
     IEnumerator DispenserGameEnd()
         {
             //콜라의 갯수를 올려주는 오브젝트의 활성화 함수를 불러오기.
-            GameObject.FindWithTag("PotatoOven").GetComponent<GameActive>().DispenserReady();
+            GameObject.FindWithTag("Dispenser").GetComponent<DispenserActive>().DispenserReady();
             yield return new WaitForSeconds(0.5f);
             one.SetActive(true);
             yield return new WaitForSeconds(0.5f);
@@ -43,8 +43,8 @@ public class DispenserGame : MonoBehaviour
             End.SetActive(true);
             GoodText.gameObject.SetActive(true);
             yield return new WaitForSeconds(1f);
-            GameActiveCs.PGameFalse();
             GoodText.gameObject.SetActive(false);
+            PotatoGameActiveCs.PGameFalse();
             
             Destroy(DispenserGameScreen);
         }
